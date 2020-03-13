@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 5px solid red;
+        }
+
+        td {
+            width: 90px;
+            height: 90px;
+        }
+    </style>
+
+ <body oncload="Player()">   
+    <script>
+        window.onload = function Player() {
+
+            let main = document.createElement('TABLE');
+
+            for (let i = 0; i < 8; i++) {
+                let row = document.createElement('TR');
+
+                for (let k = 0; k < 8; k++) {
+                    let cell = document.createElement('TD');
+
+                    if (i % 2 == k % 2) {
+                        cell.style.background = "white";
+                    } else {
+                        cell.style.background = "red";
+                    }
+                    row.appendChild(cell);
+                }
+                main.appendChild(row);
+            }
+            document.body.appendChild(main);
+        }
+
+    
+
+
+</script>
+</body>
+</html>

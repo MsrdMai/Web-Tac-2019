@@ -1,0 +1,14 @@
+
+
+<!DOCTYPE information [
+<!ELEMENT people (people+)>
+<!ELEMENT people (title,lastname,firstname,job,adress,country)>
+<!ATTLIST people id CDATA ID>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT job (#PCDATA)>
+<!ELEMENT adress (#PCDATA)>
+
+]>

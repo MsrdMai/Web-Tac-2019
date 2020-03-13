@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body><br><br><br><br><br>
+    <style>
+        body {
+            font-size: 20pt;
+        }
+    </style>
+    <center>
+        <p id="Taxt">Web Technology</p>
+
+        <button onclick=" changeTextIncre()">Font [+]</button>
+        <button onclick="changeTextNega()">Font [-]</button>
+        <button onclick="changeColorIncre()">Color [+]</button>
+        <button onclick="changeColorNega()">Color [-]</button>
+
+    </center>
+
+    <script>
+        var p = document.getElementById("Taxt");
+        var count = 1;
+        size = window.getComputedStyle(p);
+
+
+        function changeTextNega() {
+            let curSize = parseInt(size.fontSize);
+            p.style.fontSize = curSize - 4 + 'px';
+
+        }
+
+        function changeTextIncre() {
+            let curSize = parseInt(size.fontSize);
+            p.style.fontSize = curSize + 4 + 'px';
+        }
+        ///////////////
+
+        function changeColorIncre() {
+            if (count == 1) {
+                p.style.color = "blue";
+                count++;
+            }
+            else if (count == 2) {
+                p.style.color = "red";
+                count++;
+            }
+            else if (count == 3) {
+                p.style.color = "pink";
+                count++;
+            }
+            else if (count == 4) {
+                p.style.color = "green";
+                count = 5;
+            }
+
+        }
+
+        function changeColorNega() {
+            if (count == 5) {
+                p.style.color = "blue";
+                count--;
+            }
+            else if (count == 4) {
+                p.style.color = "red";
+                count--;
+            }
+            else if (count == 3) {
+                p.style.color = "pink";
+                count--;
+            }
+            else if (count == 2) {
+                p.style.color = "green";
+                count = 1;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

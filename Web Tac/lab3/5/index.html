@@ -1,0 +1,160 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+
+        }
+    </style>
+    <center>
+    <br>
+    <form role="form" action="" id="myForm" onsubmit="validateForm()" method="post">
+        <div class="form-group">
+            <p><label for='Id'>หมายเลขบัตรประชาชน : </label>
+                <input type="text" id="Id" name="Id" placeholder="ใส่ "/></p>
+        </div>
+
+        <div class="form-group">
+            <p><label for='Mr'>คำนำหน้านาม : </label>
+                <select id="Mr" name="Mr">
+                    <option value="000" selected="selected">[เลือกคำนำหน้านาม]</option>
+                    <option value="001">นาย</option>
+                    <option value="002">นาง</option>
+                    <option value="003">นางสาว</option>
+                    <option value="004">เด็กชาย</option>
+                    <option value="005">เด็กหญิง</option>
+                </select></p>
+        </div>
+
+        <div class="form-group">
+            <p><label for='FirstN'>ชื่อ : </label>
+                <input type="text" id="FirstN" name="FirstN" placeholder="ใส่ชื่อ "/></p>
+        </div>
+        <div class="form-group">
+            <p><label for='LastN'>นามสกุล : </label>
+                <input type="text" id="LastN" name="LastN" placeholder="ใส่นามสกุล "/></p>
+        </div>
+
+        <div class="form-group">
+            <p><label for='adss'>ที่อยู่:</label>
+                <input type="text" id="adss" name="adss" placeholder="ใส่ที่อยู่ "/></p>
+        </div>
+        <div class="form-group">
+            <p><label for='adss2'></label>
+                <input type="text" id="adss2" name="adss2" placeholder="ใส่ที่อยู่ "/></p>
+        </div>
+        <div class="form-group">
+            <p><label for='Aadress'>ตำบล/แขวง</label>
+                <input type="text" id="Aadress" name="Aadress" placeholder=" ใส่ตำบล/แขวง"/></p>
+        </div>
+        <div class="form-group">
+            <p><label for='Oadress'>อำเภอ เขต</label>
+                <input type="text" id="Oadress" name="Oadress" placeholder="ใส่อำเภอ เขต "/></p>
+        </div>
+        <div class="form-group">
+            <p><label for='county'>จังหวัด : </label>
+                <select id="county" name="county">
+                    <option value="100" selected="selected">[เลือกจังหวัด]</option>
+                    <option value="200">กรุงเทพมหานคร</option>
+                    <option value="300">สมุทรปราการ</option>
+                </select>
+        </div>
+        <div class="form-group">
+            <p><label for='Idadress'>รหัสไปรษณีย์ : </label>
+                <input type="text" id="Idadress" name="Idadress" placeholder="ใส่รหัสไปรษณีย์ "/></p>
+        </div>
+        <div class="form-group">
+            <p><label for='Phone'>เบอร์โทรศัพท์ : </label>
+                <input type="text" id="Phone" name="Phone" placeholder="ใส่เบอร์โทรศัพท์ "/></p>
+        </div>
+        <div class="form-group">
+            <p><input class="bg-primary" type="submit" name="submit" value="Submit" ></p>
+        </div>
+    </form></center>
+
+    <script>
+        function validateForm() {
+
+            let num1 = document.forms["myForm"]["Id"].value;
+            if (num1.length != 13) {
+                alert("หมายเลขบัตรประชาชนต้องครบ 13 หลัก");
+                return false;
+            }
+
+            let mrs = document.forms["myForm"]["Mr"].value;
+            if (mrs == "000") {
+                alert("โปรดใส่คำนำหน้านาม");
+                return false;
+            }
+
+
+
+            let namef = document.forms["myForm"]["FirstN"].value;
+            if (namef.length < 2 || namef.length > 20) {
+                alert("โปรดใส่เป็นตัวอักษร ความยาวระหว่าง 2-20 ตัวอักษร");
+                return false;
+            }
+            let namel = document.forms["myForm"]["LastN"].value;
+            if (namel.length < 2 || namel.length > 30) {
+                alert("โปรดใส่เป็นตัวอักษร ความยาวระหว่าง 2-30 ตัวอักษร");
+                return false;
+            }
+            let adss1 = document.forms["myForm"]["adss"].value;
+            if (adss1.length < 5) {
+                alert("ความยาวไม่ต่ำกว่า 5 ตัวอักษร");
+                return false;
+            }
+            let adss2 = document.forms["myForm"]["adss2"].value;
+            if (adss2.length < 5) {
+                alert("ความยาวไม่ต่ำกว่า 5 ตัวอักษร");
+                return false;
+            }
+            let adress = document.forms["myForm"]["Aadress"].value;
+            if (adress.length < 2) {
+                alert("ความยาวไม่ต่ำกว่า 2 ตัวอักษร");
+                return false;
+            }
+            let adressO = document.forms["myForm"]["Oadress"].value;
+            if (typeof (adressO) == false) {
+                alert("เป็นตัวอักษร");
+                return false;
+            }
+            let county = document.forms["myForm"]["county"].value;
+            if (county == "100") {
+                alert("โปรดใส่จังหวัด");
+                return false;
+            }
+
+
+            let idads = document.forms["myForm"]["Idadress"].value;
+            if (idads.length < 5) {
+                alert("เป็นตัวเลข จำนวน 5 หลัก");
+                return false;
+            }
+            let phonp = document.forms["myForm"]["Phone"].value;
+            if (phonp.length < 9) {
+                alert("เป็นตัวเลข จำนวน 9-10 หลัก");
+                return false;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

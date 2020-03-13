@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LAB 5</title>
+</head>
+
+<body>
+
+    <script>
+        let xhttp = new XMLHttpRequest();               ////คำสั่งพื้นฐานเปิดไฟร์
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                xmlShow(this);
+            }
+        };
+        xhttp.open("GET", "book.xml", true);
+        xhttp.send();
+
+
+        //////// อ่านไฟร์ข้างใน
+        function xmlShow(xml) {
+            let xmlDoc = xml.responseXML;
+
+            ////new
+            let edt = xmlDoc.getElementsByTagName("book");
+            let xLen = edt.length;
+            for (let i = 0; i < xLen; i++) {
+                let newEle = xmlDoc.createElement("edition");
+                let newText = xmlDoc.createTextNode("first");
+                newEle.appendChild(newText);
+                edt[i].appendChild(newEle);
+            }
+
+            let txt = "";
+            let x = xmlDoc.getElementsByTagName("title");
+            let y = xmlDoc.getElementsByTagName("author");
+            let k = xmlDoc.getElementsByTagName("price");
+            let j = xmlDoc.getElementsByTagName("edition");
+
+            for (let i = 0; i < x.length; i++) {
+                txt += x[i].childNodes[0].nodeValue + "  By  "
+                    + y[i].childNodes[0].nodeValue + "  Price " +
+                    k[i].childNodes[0].nodeValue +  " Edition " +  j[i].childNodes[0].nodeValue + "<br>";
+            }
+            document.write(txt);
+        }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let xhttp = new XMLHttpRequest();               ////คำสั่งพื้นฐานเปิดไฟร์
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                xmlShow(this);
+            }
+        };
+        xhttp.open("GET", "employee.xml", true);
+        xhttp.send();
+
+
+        //////// อ่านไฟร์ข้างใน
+        function xmlShow(xml) {
+            let xmlDoc = xml.responseXML;
+            let listt = ["Thailand", "Korea", "Sweden", "Poland", "Romania", "Germany","Norway", "Denmark", "Canada"]
+            let edt = xmlDoc.getElementsByTagName("people");
+            let xLen = edt.length;
+            for (let i = 0; i < xLen; i++) {
+                let newEle = xmlDoc.createElement("county");
+                let newText = xmlDoc.createTextNode(listt[i]);
+                newEle.appendChild(newText);
+
+                edt[i].appendChild(newEle);
+            }
+           
+
+            let txt = "";
+            let d = xmlDoc.getElementsByTagName("people");
+            let t = xmlDoc.getElementsByTagName("title");
+            let l = xmlDoc.getElementsByTagName("lastname");
+            let f = xmlDoc.getElementsByTagName("firstname");
+            let j = xmlDoc.getElementsByTagName("job");
+            let a = xmlDoc.getElementsByTagName("adress");
+            let c = xmlDoc.getElementsByTagName("county");
+
+            for (let i = 0; i < d.length; i++) {
+                txt += d[i].getAttribute('id')  + " " 
+                    + t[i].childNodes[0].nodeValue + " " +
+                    l[i].childNodes[0].nodeValue + " " +
+                     f[i].childNodes[0].nodeValue + " ( " +
+                     j[i].childNodes[0].nodeValue + " ) " + ", " +
+                     a[i].childNodes[0].nodeValue +  "  Country : " + c[i].childNodes[0].nodeValue + 
+                     "<br>";
+            }
+ 
+            document.write(txt);
+        }
+
+
+
+
+  </script>          
+</body>
+</html>

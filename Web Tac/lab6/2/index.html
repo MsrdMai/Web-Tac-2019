@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+        <script>
+                let requestURL = 'subjects.json';
+                   let request = new XMLHttpRequest();
+                   request.onreadystatechange = function () {
+                       if (request.readyState == 4 && request.status == 200) {
+                           var myJSON = JSON.parse(request.responseText);
+                           myFunction(myJSON);
+                       }
+                   };
+                   request.open("GET", requestURL, true);
+                   request.send();
+                   function myFunction(myObj) {
+           
+                       for (let i = 0; i < myObj.subject.length; i++) {
+           
+                           document.write(myObj.subject[i].display + "<br>" + 
+                            "Link : " + "<a href=" + myObj.subject[i].url + ">" + myObj.subject[i].url 
+                            + "</a>" + '<br><br>'
+                           
+                           );
+                       }
+                   }
+           
+               
+               
+               </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="image1" src="1.png">
+    <img id="image2" src="2.png"><br>
+    <img id="image3" src="3.png">
+    <img id="image4" src="4.png">
+    <br>
+    <br>
+
+    <button onclick="changesrc1()">Change1</button>
+
+
+    <script>
+        let count = 1;
+        function changesrc1() {
+
+             if (count == 1) {
+                document.getElementById('image1').src = "3.png";
+                document.getElementById('image2').src = "1.png";
+                document.getElementById('image3').src = "4.png";
+                document.getElementById('image4').src = "2.png";
+                count++;
+            }
+
+            else if (count == 2) {
+                document.getElementById('image1').src = "4.png";
+                document.getElementById('image2').src = "3.png";
+                document.getElementById('image3').src = "2.png";
+                document.getElementById('image4').src = "1.png";
+                count++;
+            }
+            else if (count == 3) {
+
+                document.getElementById('image1').src = "2.png";
+                document.getElementById('image2').src = "4.png";
+                document.getElementById('image3').src = "1.png";
+                document.getElementById('image4').src = "3.png";
+                count++;
+            }
+            else if (count == 4) {
+
+                document.getElementById('image1').src = "1.png";
+                document.getElementById('image2').src = "2.png";
+                document.getElementById('image3').src = "3.png";
+                document.getElementById('image4').src = "4.png";
+                count = 1;
+            }
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

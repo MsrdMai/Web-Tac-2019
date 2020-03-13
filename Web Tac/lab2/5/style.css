@@ -1,0 +1,24 @@
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    background: linear-gradient( Beige  , transparent),
+	linear-gradient(to top left, yellow , transparent),
+	linear-gradient(to top right,  MediumSpringGreen, transparent);
+    background-blend-mode: screen;
+    color:	#191970;
+    font-size: 20;
+    
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:DarkSlateBlue ;
+    color: white;
+    text-align: center;
+  }
+
+h1{
+    color: 	#191970;
+}

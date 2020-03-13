@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <h3>Value 1: <input type="text" id="num1"> <br></h3>
+    <h3>Value 2: <input type="text" id="num2"><br></h3>
+
+    <button onclick="change()">Calculate</button> <br>
+    <br>
+
+    <h4 id="sum"></h4>
+
+    <script>
+
+        function change() {
+
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+
+            totel = num1 + num2;
+
+            document.getElementById("sum").innerHTML = "Result :" + totel;
+
+
+            let x = document.createElement("P");
+            let t = document.createTextNode(num1 + " + " + num2 + " = " + totel);
+            x.appendChild(t);
+            document.body.appendChild(x);
+
+        }
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

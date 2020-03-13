@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+
+        }
+    </style>
+<center>
+    <form action="" id="myForm" onsubmit="validateForm()" method="post">
+        <p><label for='Id'>หมายเลขบัตรประชาชน : </label>
+            <input type="text" id="Id" name="Id" /></p>
+
+
+        <p><label for='Mr'>คำนำหน้านาม : </label>
+            <select id="Mr" name="Mr">
+                <option value="000" selected="selected">[เลือกคำนำหน้านาม]</option>
+                <option value="001">นาย</option>
+                <option value="002">นาง</option>
+                <option value="003">นางสาว</option>
+                <option value="004">เด็กชาย</option>
+                <option value="005">เด็กหญิง</option>
+            </select></p>
+
+        <p><label for='FirstN'>ชื่อ : </label>
+            <input type="text" id="FirstN" name="FirstN" /></p>
+        <p><label for='LastN'>นามสกุล : </label>
+            <input type="text" id="LastN" name="LastN" /></p>
+
+        <p><label for='adss'>ที่อยู่:</label>
+            <input type="text" id="adss" name="adss" /></p>
+        <p><label for='adss2'></label>
+            <input type="text" id="adss2" name="adss2" /></p>
+        <p><label for='Aadress'>ตำบล/แขวง</label>
+            <input type="text" id="Aadress" name="Aadress" /></p>
+        <p><label for='Oadress'>อำเภอ เขต</label>
+            <input type="text" id="Oadress" name="Oadress" /></p>
+        <p><label for='county'>จังหวัด : </label>
+            <select id="county" name="county">
+                <option value="100" selected="selected">[เลือกจังหวัด]</option>
+                <option value="200">กรุงเทพมหานคร</option>
+                <option value="300">สมุทรปราการ</option>
+            </select>
+            <p><label for='Idadress'>รหัสไปรษณีย์ : </label>
+                <input type="text" id="Idadress" name="Idadress" /></p>
+            <p><label for='Phone'>เบอร์โทรศัพท์ : </label>
+                <input type="text" id="Phone" name="Phone" /></p>
+            <p><input type="submit" name="submit" value="Submit"></p>
+    </form>
+
+</center>
+
+
+</body>
+
+</html>

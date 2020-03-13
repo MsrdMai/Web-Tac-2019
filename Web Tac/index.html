@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+    body{
+        font-size: 20px;
+    } 
+    </style>
+</head>
+
+<body>
+    <h1>ลงทะเบียนร่วมงาน</h1><br>
+    <input type="text" id="num" placeholder="รหัสนักศึกษา">
+    <input type="text" id="name" placeholder="ชื่อ">
+    <input type="text" id="lname" placeholder="นามสกุล">
+    <button onclick="ice()">ลงทะเบียน</button> <br><br>
+
+    <table id="table0" >
+        <tr>
+            <th style="background: #DDDDDD">ลำดับที่</th>
+            <th style="background: #DDDDDD">รหัสนักศึกษา</th>
+            <th style="background: #DDDDDD">ชื่อ</th>
+            <th style="background: #DDDDDD">นามสกุล</th>
+        </tr>
+    </table>
+    <script>
+        ck = 0;
+        function ice() {
+            ck++;
+            let num1 = document.getElementById('num').value;
+            let name1 = document.getElementById('name').value;
+            let lname1 = document.getElementById('lname').value;
+
+            let info = [ck, num1, name1, lname1]
+
+
+            let table = document.getElementById('table0');
+
+            let row = table.insertRow(-1);
+
+            for (i = 0; i < 4; i++) {
+                cell = row.insertCell(-1);
+                text = info[i];
+                cell.appendChild(document.createTextNode(text));
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

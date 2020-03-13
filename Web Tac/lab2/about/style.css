@@ -1,0 +1,42 @@
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    background: linear-gradient( pink , transparent),
+	linear-gradient(to top left, yellow , transparent),
+	linear-gradient(to top right,  MediumSpringGreen, transparent);
+    background-blend-mode: screen;
+    color: black;
+    font-size: 20;
+    
+}
+
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    color:Crimson   ;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+     color:Crimson ; 
+}
+
+h2{
+   font-size: 20px;
+    font-weight: bold;
+     color: blue; 
+}
+
+img {
+    border-radius: 50%;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:blueviolet;
+    color: white;
+    text-align: center;
+  }

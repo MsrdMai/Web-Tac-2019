@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+
+    <h1>ลงทะเบียนร่วมงาน</h1>
+
+    <input type=text id="Id" placeholder="รหัสนักศึกษา">
+    <input type=text id="Name" placeholder=" ชื่อ ">
+    <input type=text id="Last" placeholder="นามสกุล">
+    <button onclick="listName()">ลงทะเบียน</button>
+    <br>
+    <br>
+    <table id="Tag" border=1 width="400">
+
+        <tr>
+            <th>ลำดับที่</th>
+            <th>รหัสนักศึกษา</th>
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+        </tr>
+
+    </table>
+
+    <script>
+        let count = 0;
+        function listName() {
+            count++;
+
+            let id = document.getElementById("Id").value;
+            let name = document.getElementById("Name").value;
+            let last = document.getElementById("Last").value;
+            /////////////////////////////////////////////////////
+            
+            let mylist = [count, id, name, last];
+            let table = document.getElementById('Tag');
+            let row = table.insertRow();
+
+            for(i = 0; i<4;i++){
+            let cell = row.insertCell();
+            text = mylist[i];
+           
+            cell.appendChild(document.createTextNode(text));
+
+            
+}
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

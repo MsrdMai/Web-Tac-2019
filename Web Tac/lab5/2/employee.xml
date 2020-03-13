@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<information>
+    <people id="1">
+        <title>Ms.</title>
+        <lastname>Davolio</lastname>
+        <firstname>Nancy</firstname>
+        <job>Sales Representative</job>
+        <adress>507 - 20th Ave. E. Apt. 2A</adress>
+    </people>
+
+    <people id="2">
+        <title>Mr.</title>
+        <lastname>Fuller</lastname>
+        <firstname>Andrew</firstname>
+        <job>Vice President,Sales </job>
+        <adress>908 W. Capital Way</adress>
+    </people>
+
+
+    <people id="3">
+        <title>Ms.</title>
+        <lastname>Leverling</lastname>
+        <firstname>Janet</firstname>
+        <job>Sales Representative</job>
+        <adress>722 Moss Bay Blvd</adress>
+    </people>
+
+    <people id="4">
+        <title>Mrs.</title>
+        <lastname>Peacock  </lastname>
+        <firstname>Margaret</firstname>
+        <job>Sales Representative</job>
+        <adress>4110 Old Redmond Rd.</adress>
+    </people>
+
+    <people id="5">
+        <title>Mr.</title>
+        <lastname>Buchanan</lastname>
+        <firstname>Steven </firstname>
+        <job>Sales Manager</job>
+        <adress>14 Garrett Hill</adress>
+    </people>
+
+    <people id="6">
+        <title>Mr.</title>
+        <lastname>Suyama</lastname>
+        <firstname> Michael</firstname>
+        <job>Sales Representative</job>
+        <adress>Coventry House Miner Rd.</adress>
+    </people>
+
+    <people id="7">
+        <title>Mr.</title>
+        <lastname>King </lastname>
+        <firstname>Robert</firstname>
+        <job> Sales Representative</job>
+        <adress>Edgeham Hollow Winchester Way</adress>
+    </people>
+
+    <people id="8">
+        <title>Ms.</title>
+        <lastname>Callahan </lastname>
+        <firstname>Laura</firstname>
+        <job>Inside Sales Coordinator</job>
+        <adress>4726 - 11th Ave. N.E.</adress>
+    </people>
+
+    <people id="9">
+        <title>Ms.</title>
+        <lastname>Dodsworth</lastname>
+        <firstname>Anne</firstname>
+        <job>Sales Representative</job>
+        <adress>7 Houndstooth Rd.</adress>
+    </people>
+
+
+</information>

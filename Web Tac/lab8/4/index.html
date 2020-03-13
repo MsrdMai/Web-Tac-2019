@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-family: 'Bai Jamjuree', sans-serif;
+            margin: 10;
+            background: turquoise;
+            
+        }
+        
+        h4 {
+            font-size: 25;
+            color: white;
+        }
+        .footer{
+            color: thistle;
+            background-color: rgba(236, 243, 247, 0.692);
+            width: 100%;
+            height: 100%;
+        }
+        h2{
+           
+            background-color:#39a3e9a4  ;
+           
+            color: whitesmoke;
+  
+        }
+        h4{
+            color: #005582;
+        }
+
+        #submit{
+            width:100;
+            height:60;
+        }
+        
+
+    </style>
+
+<center>
+
+<div class="container"><h2 >กรุณากรอกข้อมูล</h2><hr> 
+    <form id="showmsg" action="show.php" method="post" class="footer"> 
+        <br>
+        <h4 > หมายเลขบัตรประชาชน</h4>
+        <input class="border border-info" type="text" id="iD" name="iD" /><br><br>
+
+        <h4>ชื่อ </h4>
+        <input class="border border-info"  type="text" id="firstN" name="firstN" /><br><br>
+
+        <h4>  นามสกุล </h4>
+        <input class="border border-info" type="text" id="lastN" name="lastN" /> <br><br>
+
+        <h4> ที่อยู่   </h4>
+        <input class="border border-info" type="text" id="ads1" name="ads1" /><br><br>
+
+         <h4> อำเภอ/เขต   </h4>
+        <input class="border border-info" type="text" id="ads2" name="ads2" /><br><br>
+
+        <h4> จังหวัด   </h4>
+        <input class="border border-info" type="text" id="ads3" name="ads3" /><br><br>
+
+        <h4> รหัสไปรษณีย์  </h4>
+        <input class="border border-info" type="text" id="ads4" name="ads4" /><br><br>
+
+        <h4> เบอร์โทรศัพท์</h4>
+        <input class="border border-info" type="text" id="phone" name="phone" />
+        <br>
+        <br><br><hr>
+        <input class="border border-info "  type="submit" id="submit" value="ยืนยัน">
+<br><br>
+  
+    </form></div></center>
+</body>
+
+</html>
